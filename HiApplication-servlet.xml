@@ -5,8 +5,19 @@
 	<!-- Default handler mapping -->
 	<bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping" />
 
-	<!-- Controller mapping -->
-	<bean name="/hi.pd" class="controller.HiController" />
+	<!-- Controller mapping use alternatively-->
+	<bean name="/hi.pd" class="controller.HiController" /><!--for BeanNameUrlHandlerapping only-->
+	
+	<bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+			<property name="mappings">
+					<props>
+						<prop key="/hi.pd">simpleController1</prop>
+						<prop key="/hello.pd">simpleController2</prop>
+					</props>
+			</property>
+	</bean>
+	<bean id="simpleController1" class="controller.HiController"/>
+	<bean id="simpleController2" class="controller.HelloController"/>
 	
 	<!-- View resolver mapping -->
 
