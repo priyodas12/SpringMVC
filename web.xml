@@ -22,7 +22,7 @@
 	<!-- Default Configuration -->
 
 	<servlet>
-		<servlet-name>HiApplication</servlet-name>
+		<servlet-name>MVCApplication</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
         <init-param>
 			      <param-name>contextConfigLocation</param-name>
@@ -31,7 +31,7 @@
 		<load-on-startup>1</load-on-startup>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>HiApplication</servlet-name>
+		<servlet-name>MVCApplication</servlet-name>
 		<url-pattern>*.pd</url-pattern>
 	</servlet-mapping>
 </web-app>
