@@ -5,7 +5,7 @@
 	<!-- Default handler mapping -->
 	<bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping" />
 
-	<!-- Controller mapping use alternatively-->
+	<!-- Controller mapping use only one HandlerMapping-->
 	<bean name="/hi.pd" class="controller.HiController" /><!--for BeanNameUrlHandlerapping only-->
 	
 	<bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
